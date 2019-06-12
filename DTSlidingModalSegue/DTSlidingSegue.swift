@@ -18,7 +18,7 @@ open class DTSlidingLeftSegue: UIStoryboardSegue {
         newV?.center = CGPoint(x: (preV?.center.x)! + (preV?.frame.size.width)!, y: (newV?.center.y)!)
         window.insertSubview(newV!, aboveSubview:preV!)
         
-        UIView.animate(withDuration: Double(UINavigationControllerHideShowBarDuration)
+        UIView.animate(withDuration: Double(UINavigationController.hideShowBarDuration)
             ,delay:0.0
             ,options:.curveEaseOut
             ,animations:{
@@ -44,7 +44,7 @@ open class DTSlidingLeftUnwindSegue: UIStoryboardSegue {
         newV?.center = (preV?.center)!
         window.insertSubview(newV!, at:0)
         
-        UIView.animate(withDuration: Double(UINavigationControllerHideShowBarDuration)
+        UIView.animate(withDuration: Double(UINavigationController.hideShowBarDuration)
             ,delay:0.0
             ,options:.curveEaseOut
             ,animations:{
@@ -69,7 +69,7 @@ open class DTSlidingRightSegue: UIStoryboardSegue {
         newV.center = CGPoint(x: preV.center.x - preV.frame.size.width, y: newV.center.y)
         window.insertSubview(newV, aboveSubview:preV)
         
-        UIView.animate(withDuration: Double(UINavigationControllerHideShowBarDuration)
+        UIView.animate(withDuration: Double(UINavigationController.hideShowBarDuration)
             ,delay:0.0
             ,options:.curveEaseOut
             ,animations:{
@@ -97,7 +97,7 @@ open class DTSlidingRightUnwindSegue: UIStoryboardSegue {
         newV.center = preV.center
         window.insertSubview(newV, at:0)
         
-        UIView.animate(withDuration: Double(UINavigationControllerHideShowBarDuration)
+        UIView.animate(withDuration: Double(UINavigationController.hideShowBarDuration)
             ,delay:0.0
             ,options:.curveEaseOut
             ,animations:{
